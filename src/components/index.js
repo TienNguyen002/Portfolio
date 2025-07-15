@@ -12,11 +12,13 @@ import Experience from "./pages/Experience";
 import Works from "./pages/Works";
 import Feedbacks from "./pages/Feedbacks";
 import Contact from "./pages/Contact";
+import Service from "./pages/Service";
 
 export {
   Hero,
   Navbar,
   About,
+  Service,
   Tech,
   Experience,
   Works,

@@ -5,6 +5,9 @@ import { styles } from "../../styles";
 import { navLinks } from "../../constants";
 import { logo, menu, close } from "../../assets";
 
+import { CiMenuFries } from "react-icons/ci";
+import { IoClose } from "react-icons/io5";
+
 const Navbar = () => {
   const [active, setActive] = useState("Home");
   const [toggle, setToggle] = useState(false);
@@ -57,7 +60,15 @@ const Navbar = () => {
               onClick={() => setActive(nav.title)}
             >
               {nav.id === "home" ? (
-                <Link to="/">{nav.title}</Link>
+                <Link
+                  to="/"
+                  onClick={() => {
+                    setActive("Home");
+                    window.scrollTo(0, 0);
+                  }}
+                >
+                  {nav.title}
+                </Link>
               ) : (
                 <a href={`#${nav.id}`}>{nav.title}</a>
               )}
@@ -66,12 +77,13 @@ const Navbar = () => {
         </ul>
 
         <div className="sm:hidden flex flex-1 justify-end items-center">
-          <img
-            src={toggle ? close : menu}
-            alt="menu"
-            className="w-[28px] h-[28px] object-contain"
-            onClick={() => setToggle(!toggle)}
-          />
+          <div onClick={() => setToggle(!toggle)} className="cursor-pointer">
+            {toggle ? (
+              <IoClose className="w-7 h-7 text-white hover:text-accent" />
+            ) : (
+              <CiMenuFries className="w-7 h-7 text-white hover:text-accent" />
+            )}
+          </div>
 
           <div
             className={`${
@@ -93,7 +105,15 @@ const Navbar = () => {
                   }}
                 >
                   {nav.id === "home" ? (
-                    <Link to="/">{nav.title}</Link>
+                    <Link
+                      to="/"
+                      onClick={() => {
+                        setActive("Home");
+                        window.scrollTo(0, 0);
+                      }}
+                    >
+                      {nav.title}
+                    </Link>
                   ) : (
                     <a href={`#${nav.id}`}>{nav.title}</a>
                   )}

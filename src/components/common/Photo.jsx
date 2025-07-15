@@ -1,7 +1,7 @@
 import React from "react";
 
 import { motion } from "framer-motion";
-import image from "../../assets/photo.png";
+import image from "../../assets/photo.jpg";
 
 const Photo = () => {
   return (
@@ -24,7 +24,7 @@ const Photo = () => {
           <img
             src={image}
             alt=""
-            className="absolute inset-0 w-full h-full object-contain"
+            className="absolute inset-0 w-full h-full rounded-full aspect-square object-cover"
             loading="eager"
           />
         </motion.div>

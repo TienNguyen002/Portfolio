@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 import { styles } from "../../styles";
 import { services } from "../../constants";
-import { fadeIn, textVariant } from "./../../utils/motion";
+import { fadeIn, textVariant } from "../../utils/motion";
 import { SectionWrapper } from "../../hoc";
 
 const ServiceCard = ({ index, title, icon }) => (
@@ -34,12 +34,12 @@ const ServiceCard = ({ index, title, icon }) => (
   </Tilt>
 );
 
-const About = () => {
+const Service = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview.</h2>
+        <h2 className={styles.sectionHeadText}>Services.</h2>
       </motion.div>
 
       <motion.p
@@ -52,8 +52,14 @@ const About = () => {
         create efficient, scalable, and user-friendly solutions that solve
         real-world problems. Let's work together to bring your ideas to life!
       </motion.p>
+
+      <div className="mt-20 flex flex-wrap gap-10">
+        {services.map((service, index) => (
+          <ServiceCard key={service.title} index={index} {...service} />
+        ))}
+      </div>
     </>
   );
 };
 
-export default SectionWrapper(About, "about");
+export default SectionWrapper(Service, "services");
