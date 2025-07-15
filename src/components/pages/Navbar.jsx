@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import { navLinks } from "../constants";
-import { logo, menu, close } from "../assets";
+import { styles } from "../../styles";
+import { navLinks } from "../../constants";
+import { logo, menu, close } from "../../assets";
 
 const Navbar = () => {
-  const [active, setActive] = useState("");
+  const [active, setActive] = useState("Home");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -26,21 +27,21 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`w-full flex items-center py-5 fixed top-0 z-20 sm:px-16 px-6`}
+      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
           to="/"
           className="flex items-center gap-2"
           onClick={() => {
-            setActive("");
+            setActive("Home");
             window.scrollTo(0, 0);
           }}
         >
           <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
           <p className="text-white text-[18px] font-bold cursor-pointer flex ">
             Nguyễn Hoàng Nhật Tiến &nbsp;
-            <span className="sm:block hidden"> | Portfolio</span>
+            <span className="sm:block lg:block hidden"> | Portfolio</span>
           </p>
         </Link>
 
@@ -49,11 +50,17 @@ const Navbar = () => {
             <li
               key={nav.id}
               className={`${
-                active === nav.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer`}
+                active === nav.title
+                  ? "text-accent border-accent border-b-2"
+                  : "text-secondary"
+              } hover:text-accent-hover text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(nav.title)}
             >
-              <a href={`#${nav.id}`}>{nav.title}</a>
+              {nav.id === "home" ? (
+                <Link to="/">{nav.title}</Link>
+              ) : (
+                <a href={`#${nav.id}`}>{nav.title}</a>
+              )}
             </li>
           ))}
         </ul>
@@ -76,14 +83,20 @@ const Navbar = () => {
                 <li
                   key={nav.id}
                   className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                    active === nav.title ? "text-white" : "text-secondary"
+                    active === nav.title
+                      ? "text-accent border-accent border-b-2"
+                      : "text-secondary"
                   }`}
                   onClick={() => {
                     setToggle(!toggle);
                     setActive(nav.title);
                   }}
                 >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
+                  {nav.id === "home" ? (
+                    <Link to="/">{nav.title}</Link>
+                  ) : (
+                    <a href={`#${nav.id}`}>{nav.title}</a>
+                  )}
                 </li>
               ))}
             </ul>

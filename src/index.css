@@ -1,8 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
 @import "tailwindcss";
 
 @theme {
   --font-poppins: Poppins, sans-serif;
+  --font-jetbrains: 'JetBrains Mono', monospace;
   
   --color-primary: #050816;
   --color-secondary: #aaa6c3;
@@ -10,17 +13,20 @@
   --color-black-100: #100d25;
   --color-black-200: #090325;
   --color-white-100: #f3f3f3;
+  --color-accent: #00ff99;
+  --color-accent-hover: #00e187;
 
   --shadow-card: 0px 35px 120px -15px #211e35;
 
   --screen-xs: 450px;
+  --screen-ip: 1024px;
 
   --bg-hero-pattern: url('/src/assets/herobg.png');
 }
 
 * {
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   scroll-behavior: smooth;
   color-scheme: dark;
 }
@@ -136,6 +142,36 @@
   text-indent: -9999em;
   animation: mulShdSpin 1.1s infinite ease;
   transform: translateZ(0);
+}
+
+.h1 {
+  font-size: 40px;
+  line-height: 1.1;
+  font-weight: 600;
+}
+
+.h2{
+  font-size: 36px;
+  line-height: 1.1;
+  font-weight: 600;
+}
+
+.h3{
+  font-size: 20px;
+  line-height: 1.1;
+  font-weight: 600;
+}
+
+@media (min-width: 1280px) {
+  .h1 {
+    font-size: 50px;
+  }
+  .h2 {
+    font-size: 48px;
+  }
+   .h3 {
+    font-size: 24px;
+  }
 }
 
 @keyframes mulShdSpin {

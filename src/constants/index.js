@@ -25,10 +25,20 @@ import {
   threejs,
 } from "../assets";
 
+import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
+
 export const navLinks = [
+  {
+    id: "home",
+    title: "Home",
+  },
   {
     id: "about",
     title: "About",
+  },
+  {
+    id: "services",
+    title: "Services",
   },
   {
     id: "work",
@@ -38,6 +48,12 @@ export const navLinks = [
     id: "contact",
     title: "Contact",
   },
+];
+
+const socials = [
+  { icon: FaGithub, path: "" },
+  { icon: FaLinkedin, path: "" },
+  { icon: FaFacebook, path: "" },
 ];
 
 const services = [
@@ -262,4 +278,4 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { socials, services, technologies, experiences, testimonials, projects };
