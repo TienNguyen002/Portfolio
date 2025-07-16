@@ -2,28 +2,35 @@ import { styles } from "../../styles";
 import { FiDownload } from "react-icons/fi";
 import Socials from "../common/Socials";
 import Photo from "../common/Photo";
+import mobile from "../../assets/mobile.png";
+import { useTypewriter, Cursor } from "react-simple-typewriter";
 
 const Hero = () => {
+  const [text] = useTypewriter({
+    words: ["Nguyen Hoang Nhat Tien"],
+    loop: {},
+  });
+
   return (
     <div
       className={`relative inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
     >
-      <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
-        <div className="text-center xl:text-left order-2 xl:order-none pb-35">
+      <div className="flex flex-col xl:flex-row items-center text-white px-6 py-12 gap-10">
+        <div className="text-center xl:text-left order-2 xl:order-none pb-35 xl:w-[560px]">
           <span className="text-xl">Website Developer</span>
           <h1 className="h1 mb-6">
-            Hello I'm <br />{" "}
-            <span className="text-accent">Nguyen Hoang Nhat Tien</span>
+            Hello I'm <br />
+            <span className="text-accent">{text}</span>
+            <Cursor />
           </h1>
-          <p className="max-w-[500px] mb-9 text-white/80">
-            I excel at crafting elegent digital experiences and I am proficient
-            in various programming languages and technologies
-          </p>
+          <p className="max-w-[500px] mb-9 text-white/80">I excel at</p>
           <div className="flex flex-col xl:flex-row items-center gap-8">
-            <button className="border uppercase gap-2 cursor-pointer rounded-full flex items-center justify-between border-accent text-accent hover:bg-accent hover:text-primary hover:transition-all duration-500 px-5 py-2.5">
-              <span>Download CV </span>
-              <FiDownload className="text-xl" />
-            </button>
+            <a href={mobile} download>
+              <button className="border uppercase gap-2 cursor-pointer rounded-full flex items-center justify-between border-accent text-accent hover:bg-accent hover:text-primary hover:transition-all duration-500 px-5 py-2.5">
+                <span>Download CV </span>
+                <FiDownload className="text-xl" />
+              </button>
+            </a>
             <div className="mb-8 xl:mb-0 ">
               <Socials
                 containerStyles="flex gap-6"

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import { styles } from "../../styles";
 import { navLinks } from "../../constants";
-import { logo, menu, close } from "../../assets";
+import { logo } from "../../assets";
 
 import { CiMenuFries } from "react-icons/ci";
 import { IoClose } from "react-icons/io5";
@@ -30,7 +30,13 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20`}
+      className={`${
+        styles.paddingX
+      } w-full flex items-center py-5 fixed top-0 z-20 transition-all duration-300 ${
+        scrolled
+          ? "bg-primary bg-opacity-90 backdrop-blur-md shadow-lg"
+          : "bg-transparent"
+      }`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
@@ -44,7 +50,10 @@ const Navbar = () => {
           <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
           <p className="text-white text-[18px] font-bold cursor-pointer flex ">
             Nguyễn Hoàng Nhật Tiến &nbsp;
-            <span className="sm:block lg:block hidden"> | Portfolio</span>
+            <span className="sm:block md:block lg:block hidden">
+              {" "}
+              | Portfolio
+            </span>
           </p>
         </Link>
 
