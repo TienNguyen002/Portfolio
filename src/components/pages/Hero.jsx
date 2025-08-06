@@ -2,7 +2,7 @@ import { styles } from "../../styles";
 import { FiDownload } from "react-icons/fi";
 import Socials from "../common/Socials";
 import Photo from "../common/Photo";
-import mobile from "../../assets/mobile.png";
+import CV from "../../assets/CV_Nguyễn Hoàng Nhật Tiến _ Web Developer.pdf";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 
 const Hero = () => {
@@ -29,7 +29,7 @@ const Hero = () => {
             the frontend and .NET Core on the backend.
           </p>
           <div className="flex flex-col xl:flex-row items-center gap-8">
-            <a href={mobile} download>
+            <a href={CV} download>
               <button className="border uppercase gap-2 cursor-pointer rounded-full flex items-center justify-between border-accent text-accent hover:bg-accent hover:text-primary hover:transition-all duration-500 px-5 py-2.5">
                 <span>Download CV </span>
                 <FiDownload className="text-xl" />
