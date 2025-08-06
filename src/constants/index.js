@@ -58,8 +58,8 @@ export const navLinks = [
 
 const socials = [
   { icon: FaGithub, path: "https://github.com/TienNguyen002" },
-  { icon: FaLinkedin, path: "" },
-  { icon: FaFacebook, path: "" },
+  { icon: FaLinkedin, path: "https://linkedin.com/in/tiennguyen002" },
+  { icon: FaFacebook, path: "https://facebook.com/Junn.Nguy3n" },
 ];
 
 const info = [
