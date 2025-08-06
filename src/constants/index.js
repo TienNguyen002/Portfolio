@@ -174,10 +174,10 @@ const technologies = [
 const experiences = [
   {
     title: "Back-end Developer",
-    company_name: "TiTan Technology",
+    company_name: "Titan Technology Corporation",
     icon: titan,
     iconBg: "#fff",
-    date: "February 2024 - May 2024",
+    date: "February 2024 - July 2024",
     points: [
       "Developing and maintaining web applications using .NET Core and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
