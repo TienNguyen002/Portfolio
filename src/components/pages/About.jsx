@@ -67,10 +67,34 @@ const About = () => {
             variants={fadeIn("", "", 0.1, 1)}
             className="text-gray-300 leading-relaxed max-w-xl"
           >
-            I have a strong .
+            Motivated Software Engineer with a strong foundation in{" "}
+            <b className="text-accent">React</b>,{" "}
+            <b className="text-accent">.NET</b> and{" "}
+            <b className="text-accent">RESTful APIs</b>. Passionate about clean
+            code, UI/UX, and collaborating in Agile teams to deliver impactful
+            products.
             <ul className="list-disc pl-5 mt-5">
-              <li>In the short term, .</li>
-              <li>In the long term, .</li>
+              <h3 className="text-accent font-extrabold text-xl mb-4">
+                In the short term,
+              </h3>
+              <li>
+                Join a modern engineering team to deepen knowledge in React,
+                TypeScript, and RESTful APIs.
+              </li>
+              <li>
+                Apply Clean Architecture and DevOps practices in real-world
+                systems..
+              </li>
+            </ul>
+            <ul className="list-disc pl-5 mt-5">
+              <h3 className="text-accent font-extrabold text-xl mb-4">
+                In the long term,
+              </h3>
+              <li>
+                Grow into a senior full-stack engineer with expertise in
+                building scalable, high-performance web applications.
+              </li>
+              <li>Mentor junior developers and lead impactful projects.</li>
             </ul>
           </motion.p>
 

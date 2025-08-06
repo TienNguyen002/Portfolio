@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import image from "../../assets/photo.jpg";
+import image from "../../assets/Anh.png";
 
 const Photo = () => {
   return (

@@ -12,15 +12,12 @@ import {
   tailwind,
   nodejs,
   mongodb,
+  scss,
   git,
   figma,
-  docker,
-  starbucks,
   titan,
-  carrent,
-  jobit,
-  tripguide,
-  threejs,
+  scientificresearch,
+  ecommerce,
 } from "../assets";
 
 import {
@@ -89,7 +86,7 @@ const services = [
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "Frontend Developer",
     icon: mobile,
   },
   {
@@ -104,7 +101,12 @@ const services = [
 
 const categories = ["all", "frontend", "backend", "tools"];
 
-const softSkills = ["Creative", "Efficient", "Scalable", "Friendly"];
+const softSkills = [
+  "Strong collaboration & communication",
+  "Self-driven & quick learner",
+  "Attention to detail in UI/UX",
+  "Able to document and explain complex logic clearly",
+];
 
 const technologies = [
   {
@@ -140,6 +142,11 @@ const technologies = [
   {
     name: "Tailwind CSS",
     icon: tailwind,
+    category: "frontend",
+  },
+  {
+    name: "SASS",
+    icon: scss,
     category: "frontend",
   },
   {
@@ -182,67 +189,47 @@ const experiences = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Scientific Research Management System",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "The Scientific Research Management System is a full-stack web application for multiple user roles — including students, lecturers, and department administrators — to manage and track research topics, assignments, approvals, and reports in one centralized platform.",
     tags: [
       {
-        name: "react",
+        name: "reactJS",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: ".NET Core",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "Bootstrap",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: scientificresearch,
+    source_code_link:
+      "https://github.com/TienNguyen002/Scientific_Research_Management_System",
   },
   {
-    name: "Job IT",
+    name: "E-Commerce Web App",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "The E-Commerce Web App is a full-stack web application designed to simulate a real-world online shopping experience. It supports features such as product browsing, cart management, order placement, user authentication, and admin product control",
     tags: [
       {
-        name: "react",
+        name: "reactJS",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: ".NET Core",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "SCSS",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: ecommerce,
+    source_code_link: "https://github.com/TienNguyen002/E-Commerce_Web_App",
   },
 ];
 

@@ -23,7 +23,11 @@ const Hero = () => {
             <span className="text-accent">{text}</span>
             <Cursor />
           </h1>
-          <p className="max-w-[500px] mb-9 text-white/80">I excel at</p>
+          <p className="max-w-[500px] mb-9 text-white/80">
+            I excel at creating scalable, maintainable, and user-friendly
+            full-stack web solutions,responsive web applications using React on
+            the frontend and .NET Core on the backend.
+          </p>
           <div className="flex flex-col xl:flex-row items-center gap-8">
             <a href={mobile} download>
               <button className="border uppercase gap-2 cursor-pointer rounded-full flex items-center justify-between border-accent text-accent hover:bg-accent hover:text-primary hover:transition-all duration-500 px-5 py-2.5">
